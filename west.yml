@@ -1,0 +1,13 @@
+manifest:
+  version: "0.12"
+  remotes:
+    - name: hardwario-chester
+      url-base: git@gitlab.hardwario.com:chester
+  projects:
+    - name: sdk.git
+      remote: hardwario-chester
+      revision: main
+      path: chester
+      import: true
+  self:
+    path: vendor
