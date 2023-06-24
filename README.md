@@ -39,7 +39,7 @@ pip install west
 Initialize the **West** workspace:
 
 ```
-west init -m git@gitlab.hardwario.com:chester/skeleton.git --manifest-rev main
+west init -m git@github.com:hardwario/chester-skeleton.git --manifest-rev main
 ```
 
 Synchronize the **West** workspace:
