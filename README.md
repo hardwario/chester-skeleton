@@ -3,15 +3,16 @@
 Create a directory for the **West** workspace and switch into it:
 
 ```
-mkdir skeleton && cd skeleton
+mkdir chester-app
+cd chester-app
 ```
 
-> Note: The word `skeleton` in the title and command above should be replaced with your workspace name (and preferrably match a path/name of your **Git** repository). If you only have one application in the workspace, the name should contain the application name. Once done, do not forget to delete this note to avoid any future confusion.
+> Note: The word `chester-app` in the title and command above should be replaced with your workspace name (and preferrably match a path/name of your **Git** repository). If you only have one application in the workspace, the name should contain the application name. Once done, do not forget to delete this note to avoid any future confusion.
 
 Create **Python** virtual environment in the workspace:
 
 ```
-python3 -m venv venv
+python3 -m venv .venv
 ```
 
 > Note: If the command `python3` cannot be found on your system, use `python` instead.
@@ -19,10 +20,10 @@ python3 -m venv venv
 Activate the **Python** virtual environment:
 
 ```
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
-> Note: This command should be `venv\Scripts\Activate.ps1` in **Windows Powershell**. Also, in case of the **Fish** shell, it is important to run the command as `source venv/bin/activate.fish`.
+> Note: This command should be `.venv\Scripts\Activate.ps1` in **Windows Powershell**. Also, in case of the **Fish** shell, it is important to run the command as `source .venv/bin/activate.fish`.
 
 Upgrade the **Python** package installer:
 
@@ -39,7 +40,7 @@ pip install west
 Initialize the **West** workspace:
 
 ```
-west init -m git@github.com:hardwario/chester-skeleton.git --manifest-rev main
+west init -m https://github.com/hardwario/chester-skeleton.git --manifest-rev main
 ```
 
 Synchronize the **West** workspace:
