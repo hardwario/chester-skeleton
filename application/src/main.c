@@ -3,7 +3,9 @@
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
-void main(void)
+int main(void)
 {
 	LOG_INF("Build time: " __DATE__ " " __TIME__);
+
+	return 0;
 }
