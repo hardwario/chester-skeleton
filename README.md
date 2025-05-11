@@ -52,7 +52,7 @@ west update
 Configure the default board:
 
 ```
-west config build.board chester_nrf52840
+west config build.board chester/nrf52840
 ```
 
 Install the required **Python** packages:
