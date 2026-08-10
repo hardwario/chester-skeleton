@@ -6,7 +6,7 @@ manifest:
   projects:
     - name: chester-sdk.git
       remote: hardwario
-      revision: main
+      revision: v4.0.0
       path: chester
       import: true
   self:
