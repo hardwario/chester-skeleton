@@ -49,19 +49,28 @@ Synchronize the **West** workspace:
 west update
 ```
 
-Configure the default board:
-
-```
-west config build.board chester/nrf52840
-```
-
 Install the required **Python** packages:
 
 ```
-pip install -r zephyr/scripts/requirements.txt
-pip install -r nrf/scripts/requirements.txt
-pip install -r bootloader/mcuboot/scripts/requirements.txt
-pip install -r chester/scripts/requirements.txt
+west packages pip --install
+```
+
+Export the Zephyr CMake packages:
+
+```
+west zephyr-export
+```
+
+Install the Zephyr SDK:
+
+```
+west sdk install -t arm-zephyr-eabi
+```
+
+Configure the default board:
+
+```
+west config build.board chester
 ```
 
 Go to the application directory:
@@ -82,8 +91,14 @@ Flash the application:
 west flash
 ```
 
-Debug the application:
+Open the console:
 
 ```
-west debug
+hardwario chester app console
 ```
+
+## Next Steps
+
+- Read the CHESTER [documentation](https://docs.hardwario.com/chester/)
+- Try the code [samples](https://github.com/hardwario/chester-sdk/tree/main/samples)
+- See how the [catalog applications](https://github.com/hardwario/chester-sdk/tree/main/applications) work
